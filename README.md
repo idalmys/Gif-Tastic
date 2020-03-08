@@ -1,1 +1,1 @@
-# Gif-Tasty
+# Gif-Tastic
