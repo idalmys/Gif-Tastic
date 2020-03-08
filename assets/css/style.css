@@ -23,7 +23,7 @@ body{
     
 }
 
-p, .btns ,header,button,label,#error {
+p, .btns ,header,button,#animal,label,#error {
     font-family: 'Acme', sans-serif;
     font-weight: bold;
     size: 30px;

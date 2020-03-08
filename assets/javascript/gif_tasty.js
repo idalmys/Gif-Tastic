@@ -43,8 +43,8 @@ function addImages(){
    }).then(function(response) {
      console.log(response);
      
-   
-     for(var i=0;i<10;i++){
+   if(response.data.length > 0){
+     for(var i=0 ; i< 10; i++){
        //Div conatiner
        var divImag=$("<div>");
        divImag.attr("class", "imgSpace");
@@ -76,7 +76,10 @@ function addImages(){
       $("#DivError").hide();
       $("#animal").val("");
     }
-  
+   }else{
+    $("#DivError").show();
+    $("#error").text("No results founded")
+   }
  
    
    });
@@ -130,8 +133,5 @@ $("#submit").on("click",function(){
    
 
 });
-
-
- 
  
 });
