@@ -4,7 +4,7 @@ $(document).ready(function() {
   $("#DivError").hide();
  
  var topics=["dog", "cat", "rabbit", "hamnster", "skunk", "goldfish", "bird", "turtle",  
-  "gerbil",  "chicken", "bear", "pig", "serval",  "frog"];
+  "gerbil",  "chicken", "bear", "pig", "elephnat" , "frog","jiraffe","monkey"];
  var key="api_key=A3OnftmUGvi9GnrjarRIkJQVxWQZ1L6t";
  var api="https://api.giphy.com/v1/gifs/search?";
  var limit="&limit=10";
