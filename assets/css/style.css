@@ -5,6 +5,8 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+   
+    
 }
 
 .btns,button, #submit{
@@ -22,7 +24,7 @@ body{
 }
 
 p, .btns ,header,button,label,#error {
-    font-family: 'Trade Winds', cursive;
+    font-family: 'Acme', sans-serif;
     font-weight: bold;
     size: 30px;
     color: rgb(214, 22, 48);
@@ -31,15 +33,18 @@ p, .btns ,header,button,label,#error {
  #imag{
     width: 200px;
     height: 200px;
-}
-.img{
   
+}
+.row{
+   
     float: left;
+    
 }
 .search{
     float: right;
   
 }
+
 input{
     height: 30px;
 }
@@ -52,3 +57,9 @@ button:hover {
 width: 280px;
 color: honeydew;
 }
+.imgSpace{
+
+    margin: 1%;    
+}
+
+

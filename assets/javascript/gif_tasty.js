@@ -10,7 +10,7 @@ $(document).ready(function() {
  var limit="&limit=10";
  var rating="";
  var exist=0;
- var state="";  
+  
  var texboxInput="";
 
  //create addbutton function
@@ -43,10 +43,11 @@ function addImages(){
    }).then(function(response) {
      console.log(response);
      
-
+   
      for(var i=0;i<10;i++){
        //Div conatiner
        var divImag=$("<div>");
+       divImag.attr("class", "imgSpace");
 
         //Rating 
       rating = $("<p>").text("Rating: " + response.data[i].rating);
@@ -63,9 +64,10 @@ function addImages(){
       animalImag.attr("data-still",response.data[i].images.original_still.url);
       animalImag.attr("data-animate",response.data[i].images.original.url)
       animalImag.attr("data-state","still");
-      animalImag.attr("class","gif");
+     animalImag.attr("class","gif");
+     
     
-      //Prepend objects
+  
       divImag.prepend(animalImag);
       divImag.prepend(rating);
       
@@ -74,13 +76,15 @@ function addImages(){
       $("#DivError").hide();
       $("#animal").val("");
     }
+  
+ 
    
    });
 
 }
 
 function AnimateImag(){
-  state = $(this).attr("data-state");
+ var state = $(this).attr("data-state");
   
   if (state === "still") {
     $(this).attr("src", $(this).attr("data-animate"));
@@ -113,15 +117,17 @@ $("#submit").on("click",function(){
     else{
       $("#DivError").show();
       $("#error").text("The animal already exist")
-      //console.log("Exist into array");
+      $("#animal").val("");
+      $("#img").empty();
     }
    }
    else{
       $("#DivError").show();
       $("#error").text("Please enter the animal name");
-     console.log("Enter animal name");
+      $("#img").empty();
+     
    }
-    //console.log(topics);
+   
 
 });
 
